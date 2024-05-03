@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Models\AddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Models\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Models\AddProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Models\AddPurchases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Models\AddSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Models\AddUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Samples\SampleAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Samples\SampleViews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\CategoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\CustomersView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\ProductsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\PurchaseView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\SuppliersView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\UsersView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
