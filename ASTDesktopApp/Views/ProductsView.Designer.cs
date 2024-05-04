@@ -80,6 +80,7 @@
 			dgvCategoryID.HeaderText = "CategoryID";
 			dgvCategoryID.MinimumWidth = 6;
 			dgvCategoryID.Name = "dgvCategoryID";
+			dgvCategoryID.Visible = false;
 			// 
 			// dgvCategoryName
 			// 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ASTDesktopApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da36f842666af0ec62d20c0d9177ce162081b12e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05e093989b93d597501e5a4387f853ece812cfbf")]
 [assembly: System.Reflection.AssemblyProductAttribute("ASTDesktopApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ASTDesktopApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
