@@ -231,15 +231,15 @@ namespace ASTDesktopApp
         }    
             
 
+        
 
-
-        public static string GetCategoryName(int catId)
+        public static string GetName(int id, string table)
         {
             try
             {
-                string query = $"SELECT Name FROM Categories WHERE CategoryID = @catId";
+                string query = $"SELECT Name FROM {table} WHERE CategoryID = @id";
                 SQLiteCommand cmd = new SQLiteCommand(query, MainClass.Connection);
-                cmd.Parameters.AddWithValue("@catId", catId);
+                cmd.Parameters.AddWithValue("@id", id);
                 object result = cmd.ExecuteScalar();
 
                 if (result != null)
@@ -248,16 +248,17 @@ namespace ASTDesktopApp
                 }
                 else
                 {
-                    return "Category Not Found";
+                    return "Not Found";
                 }
             }
             catch (Exception ex)
             {
                 // Handle exception (e.g., log or display error message)
-                Console.WriteLine("Error occurred while fetching category name: " + ex.Message);
+                Console.WriteLine("Error occurred while fetching name: " + ex.Message);
                 return "Error";
             }
         }
+        
 
 
     }

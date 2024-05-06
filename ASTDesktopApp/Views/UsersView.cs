@@ -33,7 +33,7 @@ namespace ASTDesktopApp.Views
 			LoadData();
 		}
 	   
-		public void LoadData()
+		private void LoadData()
 		{
 			// Clear the existing data
 			ListBox lb = new ListBox();

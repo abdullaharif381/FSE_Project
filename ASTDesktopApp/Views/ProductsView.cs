@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ASTDesktopApp.Models;
 using MaterialSkin.Controls;
-using MaterialSkin.Properties;
 
 namespace ASTDesktopApp.Views
 {
@@ -19,13 +18,9 @@ namespace ASTDesktopApp.Views
 		public ProductsView()
 		{
 			InitializeComponent();
-		}
-
-		private void ProductsView_Load(object sender, EventArgs e)
-		{
-			// Load the data from the database
 			LoadData();
 		}
+
 
 		public void LoadData()
 		{
@@ -39,55 +34,21 @@ namespace ASTDesktopApp.Views
 			lb.Items.Add(dgvCost);
 			lb.Items.Add(dgvPrice);
 
-			string query = @"SELECT p.ProductID, p.Name, p.CategoryID, c.Name, p.Description, p.Cost, p.Price FROM Products as p JOIN Categories as c ON p.CategoryID = c.CategoryID
-							WHERE c.Name like '%" + SearchTextBox.Text + "%' OR p.Name like '%" + SearchTextBox.Text + "%' ORDER BY ProductID";
-			MainClass.LoadData(query, ProductDataGridView, lb);
+
+
+			string query = @"SELECT p.ProductID, p.Name, p.CategoryID, p.Name, p.Description,
+								p.Cost, p.Price
+							FROM Products as p INNER JOIN Categories as c
+							ON p.CategoryID = c.CategoryID WHERE p.Name like '%" + SearchTextBox.Text + "%' OR" +
+							" p.Description like '%" + SearchTextBox.Text + "%' ORDER BY p.ProductID";
+			MainClass.LoadData(query, PoductDataGridView, lb);
 
 
 		}
 
 		private void ProductDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
-			if (ProductDataGridView.CurrentCell.OwningColumn.Name == "dgvEdit")
-			{
-				AddProducts addProduct = new AddProducts();
-				addProduct.setID((ProductDataGridView.CurrentRow.Cells["dgvID"].Value.ToString()));
-				addProduct.setName(ProductDataGridView.CurrentRow.Cells["dgvItem"].Value.ToString());
-				addProduct.setCategory(ProductDataGridView.CurrentRow.Cells["dgvCategoryID"].Value.ToString());
-				addProduct.setDetail(ProductDataGridView.CurrentRow.Cells["dgvDescription"].Value.ToString());
-				addProduct.setCost(ProductDataGridView.CurrentRow.Cells["dgvCost"].Value.ToString());
-				addProduct.setPrice(ProductDataGridView.CurrentRow.Cells["dgvPrice"].Value.ToString());
-
-
-
-				MainClass.BlurBackground(addProduct);
-				LoadData();
-
-
-			}
-			if (ProductDataGridView.CurrentCell.OwningColumn.Name == "dgvDel")
-
-			{
-				DialogResult dr = MessageBox.Show("Are you sure you want to delete this record?", "Question...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-				if (dr == DialogResult.Yes)
-				{
-					int ProductID = Convert.ToInt32(ProductDataGridView.CurrentRow.Cells["dgvID"].Value);
-					string query = "DELETE FROM Products WHERE ProductID = '" + ProductID + "'";
-					Hashtable ht = new Hashtable();
-					if (MainClass.SQL(query, ht) > 0)
-					{
-						// If the deletion is successful, reload the data
-						LoadData();
-						MessageBox.Show("Product deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-					}
-					else
-					{
-						// If there's an error, show the error message
-						MessageBox.Show("An error occurred while deleting the Product", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					}
-				}
-			}
-
+			
 
 
 		}
@@ -118,33 +79,36 @@ namespace ASTDesktopApp.Views
 			e.ThrowException = false;
 		}
 
+
+		private void ProductsView_Load(object sender, EventArgs e)
+		{
+
+		}
+
 		private void ProductDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
 		{
-			if (ProductDataGridView.CurrentCell.OwningColumn.Name == "dgvEdit")
+			if (PoductDataGridView.CurrentCell.OwningColumn.Name == "dgvEdit")
 			{
 				AddProducts addProduct = new AddProducts();
-				addProduct.setID((ProductDataGridView.CurrentRow.Cells["dgvID"].Value.ToString()));
-				addProduct.setName(ProductDataGridView.CurrentRow.Cells["dgvItem"].Value.ToString());
-				addProduct.setCategory(ProductDataGridView.CurrentRow.Cells["dgvCategoryID"].Value.ToString());
-				addProduct.setDetail(ProductDataGridView.CurrentRow.Cells["dgvDescription"].Value.ToString());
-				addProduct.setCost(ProductDataGridView.CurrentRow.Cells["dgvCost"].Value.ToString());
-				addProduct.setPrice(ProductDataGridView.CurrentRow.Cells["dgvPrice"].Value.ToString());
-
-
-
+				addProduct.setID((PoductDataGridView.CurrentRow.Cells["dgvID"].Value.ToString()));
+				addProduct.setName(PoductDataGridView.CurrentRow.Cells["dgvItem"].Value.ToString());
+				addProduct.setCatID(Convert.ToInt32(PoductDataGridView.CurrentRow.Cells["dgvCategoryID"].Value));
+				addProduct.setDetail(PoductDataGridView.CurrentRow.Cells["dgvDescription"].Value.ToString());
+				addProduct.setCost(PoductDataGridView.CurrentRow.Cells["dgvCost"].Value.ToString());
+				addProduct.setPrice(PoductDataGridView.CurrentRow.Cells["dgvPrice"].Value.ToString());
 				MainClass.BlurBackground(addProduct);
 				LoadData();
 
 
 			}
-			if (ProductDataGridView.CurrentCell.OwningColumn.Name == "dgvDel")
+			if (PoductDataGridView.CurrentCell.OwningColumn.Name == "dgvDel")
 
 			{
 				DialogResult dr = MessageBox.Show("Are you sure you want to delete this record?", "Question...", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 				if (dr == DialogResult.Yes)
 				{
-					int ProductID = Convert.ToInt32(ProductDataGridView.CurrentRow.Cells["dgvID"].Value);
-					string query = "DELETE FROM Products WHERE ProductID = '" + ProductID + "'";
+					int productID = Convert.ToInt32(PoductDataGridView.CurrentRow.Cells["dgvID"].Value);
+					string query = "DELETE FROM Products WHERE ProductID = '" + productID + "'";
 					Hashtable ht = new Hashtable();
 					if (MainClass.SQL(query, ht) > 0)
 					{
@@ -159,6 +123,7 @@ namespace ASTDesktopApp.Views
 					}
 				}
 			}
+
 
 		}
 	}

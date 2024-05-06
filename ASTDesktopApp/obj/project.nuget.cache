@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m2TePkbF/sdureTQcO+nRByRc+exLc5laHZzuciDN54WN5GadMy4YOQlL2cz633YxWeXqiQ/raf6sfXCVbRMQA==",
+  "dgSpecHash": "NiXD6LwffmMANBX+AhTis+5pS1wqdwQC8jB006ZkzLQYaiGwPE4IP5ts3Z/3NVfLgyK8/4rF2sc+HDAFfh9yGw==",
   "success": true,
-  "projectFilePath": "D:\\alkhair scientific\\current\\ASTOnlineShop\\ASTDesktopApp\\ASTDesktopApp\\ASTDesktopApp.csproj",
+  "projectFilePath": "D:\\alkhair scientific\\ASTDesktopApp\\ASTDesktopApp\\ASTDesktopApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AB\\.nuget\\packages\\materialskin.2\\2.3.1\\materialskin.2.2.3.1.nupkg.sha512",
     "C:\\Users\\AB\\.nuget\\packages\\materialskin.2.rtl\\2.3.1.1\\materialskin.2.rtl.2.3.1.1.nupkg.sha512",

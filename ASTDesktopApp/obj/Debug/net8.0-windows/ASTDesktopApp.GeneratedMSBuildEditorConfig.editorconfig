@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ASTDesktopApp
-build_property.ProjectDir = D:\alkhair scientific\current\ASTOnlineShop\ASTDesktopApp\ASTDesktopApp\
+build_property.ProjectDir = D:\alkhair scientific\ASTDesktopApp\ASTDesktopApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

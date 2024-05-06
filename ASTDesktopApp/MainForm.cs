@@ -118,7 +118,7 @@ namespace ASTDesktopApp
 
         private void PurchaseButton_Click(object sender, EventArgs e)
         {
-
+            AddControlsToPanel(new PurchaseView());
         }
 
         private void SaleButton_Click(object sender, EventArgs e)

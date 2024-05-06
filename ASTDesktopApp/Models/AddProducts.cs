@@ -123,7 +123,7 @@ namespace ASTDesktopApp.Models
             else
             {
                 string query = "";
-                string categoryName = MainClass.GetCategoryName(catId); // Get category name based on catId
+                string categoryName = MainClass.GetName(catId, "Categories"); // Get category name based on catId
 
                 if (id == 0)
                 {

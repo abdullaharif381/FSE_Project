@@ -28,34 +28,33 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			ProductDataGridView = new DataGridView();
+			PoductDataGridView = new DataGridView();
 			dgvSr = new DataGridViewTextBoxColumn();
 			dgvID = new DataGridViewTextBoxColumn();
 			dgvItem = new DataGridViewTextBoxColumn();
 			dgvCategoryID = new DataGridViewTextBoxColumn();
 			dgvCategoryName = new DataGridViewTextBoxColumn();
 			dgvDescription = new DataGridViewTextBoxColumn();
-			dgvCost = new DataGridViewTextBoxColumn();
 			dgvPrice = new DataGridViewTextBoxColumn();
+			dgvCost = new DataGridViewTextBoxColumn();
 			dgvEdit = new DataGridViewImageColumn();
 			dgvDel = new DataGridViewImageColumn();
 			TopViewPanel.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)ProductDataGridView).BeginInit();
+			((System.ComponentModel.ISupportInitialize)PoductDataGridView).BeginInit();
 			SuspendLayout();
 			// 
-			// ProductDataGridView
+			// PoductDataGridView
 			// 
-			ProductDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-			ProductDataGridView.BackgroundColor = SystemColors.InactiveBorder;
-			ProductDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			ProductDataGridView.Columns.AddRange(new DataGridViewColumn[] { dgvSr, dgvID, dgvItem, dgvCategoryID, dgvCategoryName, dgvDescription, dgvCost, dgvPrice, dgvEdit, dgvDel });
-			ProductDataGridView.Dock = DockStyle.Fill;
-			ProductDataGridView.Location = new Point(3, 169);
-			ProductDataGridView.Name = "ProductDataGridView";
-			ProductDataGridView.RowHeadersWidth = 51;
-			ProductDataGridView.Size = new Size(794, 278);
-			ProductDataGridView.TabIndex = 4;
-			ProductDataGridView.CellContentClick += ProductDataGridView_CellContentClick_1;
+			PoductDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+			PoductDataGridView.BackgroundColor = SystemColors.InactiveBorder;
+			PoductDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			PoductDataGridView.Columns.AddRange(new DataGridViewColumn[] { dgvSr, dgvID, dgvItem, dgvCategoryID, dgvCategoryName, dgvDescription, dgvPrice, dgvCost, dgvEdit, dgvDel });
+			PoductDataGridView.Dock = DockStyle.Fill;
+			PoductDataGridView.Location = new Point(3, 169);
+			PoductDataGridView.Name = "PoductDataGridView";
+			PoductDataGridView.RowHeadersWidth = 51;
+			PoductDataGridView.Size = new Size(794, 278);
+			PoductDataGridView.TabIndex = 4;
 			// 
 			// dgvSr
 			// 
@@ -94,17 +93,17 @@
 			dgvDescription.MinimumWidth = 6;
 			dgvDescription.Name = "dgvDescription";
 			// 
-			// dgvCost
-			// 
-			dgvCost.HeaderText = "Cost";
-			dgvCost.MinimumWidth = 6;
-			dgvCost.Name = "dgvCost";
-			// 
 			// dgvPrice
 			// 
 			dgvPrice.HeaderText = "Price";
 			dgvPrice.MinimumWidth = 6;
 			dgvPrice.Name = "dgvPrice";
+			// 
+			// dgvCost
+			// 
+			dgvCost.HeaderText = "Cost";
+			dgvCost.MinimumWidth = 6;
+			dgvCost.Name = "dgvCost";
 			// 
 			// dgvEdit
 			// 
@@ -113,6 +112,7 @@
 			dgvEdit.MinimumWidth = 6;
 			dgvEdit.Name = "dgvEdit";
 			dgvEdit.Resizable = DataGridViewTriState.True;
+			dgvEdit.SortMode = DataGridViewColumnSortMode.Automatic;
 			// 
 			// dgvDel
 			// 
@@ -120,35 +120,38 @@
 			dgvDel.Image = Properties.Resources.trash;
 			dgvDel.MinimumWidth = 6;
 			dgvDel.Name = "dgvDel";
+			dgvDel.Resizable = DataGridViewTriState.True;
+			dgvDel.SortMode = DataGridViewColumnSortMode.Automatic;
 			// 
 			// ProductsView
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 450);
-			Controls.Add(ProductDataGridView);
+			Controls.Add(PoductDataGridView);
 			Location = new Point(0, 0);
 			Name = "ProductsView";
 			Text = "ProductsView";
+			Load += ProductsView_Load;
 			Controls.SetChildIndex(TopViewPanel, 0);
-			Controls.SetChildIndex(ProductDataGridView, 0);
+			Controls.SetChildIndex(PoductDataGridView, 0);
 			TopViewPanel.ResumeLayout(false);
 			TopViewPanel.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)ProductDataGridView).EndInit();
+			((System.ComponentModel.ISupportInitialize)PoductDataGridView).EndInit();
 			ResumeLayout(false);
 		}
 
 		#endregion
 
-		private DataGridView ProductDataGridView;
+		private DataGridView PoductDataGridView;
 		private DataGridViewTextBoxColumn dgvSr;
 		private DataGridViewTextBoxColumn dgvID;
 		private DataGridViewTextBoxColumn dgvItem;
 		private DataGridViewTextBoxColumn dgvCategoryID;
 		private DataGridViewTextBoxColumn dgvCategoryName;
 		private DataGridViewTextBoxColumn dgvDescription;
-		private DataGridViewTextBoxColumn dgvCost;
 		private DataGridViewTextBoxColumn dgvPrice;
+		private DataGridViewTextBoxColumn dgvCost;
 		private DataGridViewImageColumn dgvEdit;
 		private DataGridViewImageColumn dgvDel;
 	}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\alkhair scientific\\current\\ASTOnlineShop\\ASTDesktopApp\\ASTDesktopApp\\ASTDesktopApp.csproj": {}
+    "D:\\alkhair scientific\\ASTDesktopApp\\ASTDesktopApp\\ASTDesktopApp.csproj": {}
   },
   "projects": {
-    "D:\\alkhair scientific\\current\\ASTOnlineShop\\ASTDesktopApp\\ASTDesktopApp\\ASTDesktopApp.csproj": {
+    "D:\\alkhair scientific\\ASTDesktopApp\\ASTDesktopApp\\ASTDesktopApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\alkhair scientific\\current\\ASTOnlineShop\\ASTDesktopApp\\ASTDesktopApp\\ASTDesktopApp.csproj",
+        "projectUniqueName": "D:\\alkhair scientific\\ASTDesktopApp\\ASTDesktopApp\\ASTDesktopApp.csproj",
         "projectName": "ASTDesktopApp",
-        "projectPath": "D:\\alkhair scientific\\current\\ASTOnlineShop\\ASTDesktopApp\\ASTDesktopApp\\ASTDesktopApp.csproj",
+        "projectPath": "D:\\alkhair scientific\\ASTDesktopApp\\ASTDesktopApp\\ASTDesktopApp.csproj",
         "packagesPath": "C:\\Users\\AB\\.nuget\\packages\\",
-        "outputPath": "D:\\alkhair scientific\\current\\ASTOnlineShop\\ASTDesktopApp\\ASTDesktopApp\\obj\\",
+        "outputPath": "D:\\alkhair scientific\\ASTDesktopApp\\ASTDesktopApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AB\\AppData\\Roaming\\NuGet\\NuGet.Config",
